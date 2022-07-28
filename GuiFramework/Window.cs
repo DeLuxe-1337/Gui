@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Windows.Forms;
 using GuiFramework.Rendering;
 using SkiaSharp;
@@ -30,7 +31,6 @@ namespace GuiFramework
             foreach (var renderObject in Buffer)
             {
                 renderObject.Render(canvas);
-                renderObject.Update();
             }
 
             GuiProgram.Update(this, e);
@@ -54,6 +54,14 @@ namespace GuiFramework
         private void skiaView_MouseUp(object sender, MouseEventArgs e)
         {
             MouseEvent.CallMouseUp();
+        }
+
+        private void UpdateThread_Tick(object sender, EventArgs e)
+        {
+            foreach (var renderObject in Buffer)
+            {
+                renderObject.Update();
+            }
         }
     }
 }

@@ -39,7 +39,6 @@ namespace GuiFramework.Rendering
 
         public void Update()
         {
-            throw new NotImplementedException();
         }
 
         private SKRect Calculate()

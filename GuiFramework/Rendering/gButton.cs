@@ -53,18 +53,17 @@ namespace GuiFramework.Rendering
 
         public void Render(SKCanvas canvas)
         {
-            text.position = rect.GetCenter(offsety: 4);
-            text.text = this.Text;
-
-            rect.Position = Position;
-            rect.Size = Size;
-
             rect.Render(canvas);
             text.Render(canvas);
         }
 
         public void Update()
         {
+            text.position = rect.GetCenter(offsety: 4);
+            text.text = this.Text;
+
+            rect.Position = Position;
+            rect.Size = Size;
         }
 
         private void BindEvents()

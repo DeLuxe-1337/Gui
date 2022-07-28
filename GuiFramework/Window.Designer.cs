@@ -30,7 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.skiaView = new SkiaSharp.Views.Desktop.SKControl();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Invalidate = new System.Windows.Forms.Timer(this.components);
+            this.UpdateThread = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // skiaView
@@ -46,11 +47,17 @@
             this.skiaView.MouseMove += new System.Windows.Forms.MouseEventHandler(this.skiaView_MouseMove);
             this.skiaView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.skiaView_MouseUp);
             // 
-            // timer1
+            // Invalidate
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 5;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.Invalidate.Enabled = true;
+            this.Invalidate.Interval = 1;
+            this.Invalidate.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // UpdateThread
+            // 
+            this.UpdateThread.Enabled = true;
+            this.UpdateThread.Interval = 1;
+            this.UpdateThread.Tick += new System.EventHandler(this.UpdateThread_Tick);
             // 
             // Window
             // 
@@ -70,7 +77,8 @@
         #endregion
 
         private SkiaSharp.Views.Desktop.SKControl skiaView;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer Invalidate;
+        private System.Windows.Forms.Timer UpdateThread;
     }
 }
 

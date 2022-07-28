@@ -37,7 +37,6 @@ namespace GuiFramework
 
         public void Update()
         {
-            //no need for text no anims etc
         }
     }
 }

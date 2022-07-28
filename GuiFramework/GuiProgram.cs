@@ -16,7 +16,11 @@ namespace GuiFramework
             Test.Activated += TestOnActivated;
 
             window.Buffer.Add(Other);
-            Other.Activated += TestOnActivated;
+            Other.Activated += OtherOnActivated;
+        }
+
+        private static void OtherOnActivated(object sender, EventArgs e)
+        {
         }
 
         private static void TestOnActivated(object sender, EventArgs e)
