@@ -7,14 +7,23 @@ namespace GuiFramework.Rendering
 {
     internal class gButton : RenderObject
     {
+        //Vectors
+        public Vector2 Position;
+
+        public Vector2 Size;
+
+        //Colors
         public Color3 ClickColor = new Color3(40, 40, 40);
 
         public Color3 Color = new Color3(10, 10, 10);
         public Color3 HoverColor = new Color3(23, 82, 254);
+
+        //Additional
         private bool Hovering;
-        public Vector2 Position;
+
+        //Elements
         public gRectangle rect = new gRectangle();
-        public Vector2 Size;
+
         public gText text = new gText("Click me!", new Color3(255, 255, 255), new Vector2(0, 0), 18);
 
         public gButton(Vector2 position, Vector2 size, Color3 backColor, Color3 hoverColor, bool round = false)

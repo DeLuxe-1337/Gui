@@ -7,13 +7,17 @@ namespace GuiFramework.Rendering
 {
     internal class gRectangle : RenderObject
     {
-        public Color3 color = new Color3(20, 20, 20);
-        public Vector2 pos;
-
+        //Vectors
         public Vector2 Position = new Vector2();
-        public bool Rounded = false;
-        public Vector2 size;
+
         public Vector2 Size = new Vector2();
+        public Vector2 pos;
+        public Vector2 size;
+
+        //Additional
+        public Color3 color = new Color3(20, 20, 20);
+
+        public bool Rounded = false;
 
         public void Render(SKCanvas canvas)
         {

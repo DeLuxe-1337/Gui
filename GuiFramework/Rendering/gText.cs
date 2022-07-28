@@ -8,6 +8,7 @@ namespace GuiFramework
     {
         public Color3 color;
         public Vector2 position;
+
         public int size;
         public string text;
 
