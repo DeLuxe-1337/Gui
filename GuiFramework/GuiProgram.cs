@@ -7,8 +7,8 @@ namespace GuiFramework
 {
     internal class GuiProgram
     {
-        public static gButton Test = new gButton(new Vector2(100, 40), new Vector2(100, 45), true);
-        public static gButton Other = new gButton(new Vector2(100, 120), new Vector2(100, 45));
+        public static gButton Test = new gButton(new Vector2(100, 40), new Vector2(100, 45), rounded: true);
+        public static gButton Other = new gButton(new Vector2(100, 120), new Vector2(100, 45), "Try me!");
 
         public static void Initialize(Window window)
         {

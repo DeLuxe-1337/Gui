@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Drawing;
 using System.Numerics;
 using SkiaSharp;
+using Xamarin.Forms;
+using Rectangle = System.Drawing.Rectangle;
 
 namespace GuiFramework.Rendering
 {
@@ -21,27 +22,31 @@ namespace GuiFramework.Rendering
         //Additional
         private bool Hovering;
 
+        private string Text;
+
         //Elements
         public gRectangle rect = new gRectangle();
 
         public gText text = new gText("Click me!", new Color3(255, 255, 255), new Vector2(0, 0), 18);
 
-        public gButton(Vector2 position, Vector2 size, Color3 backColor, Color3 hoverColor, bool round = false)
+        public gButton(Vector2 position, Vector2 size, Color3 backColor, Color3 hoverColor, string text = "Click me!", bool round = false)
         {
             Position = position;
             Size = size;
             rect.color = Color;
             HoverColor = hoverColor;
             rect.Rounded = round;
+            this.Text = text;
 
             BindEvents();
         }
 
-        public gButton(Vector2 position, Vector2 size, bool rounded = false)
+        public gButton(Vector2 position, Vector2 size, string text = "Click me!", bool rounded = false)
         {
             Position = position;
             Size = size;
             rect.Rounded = rounded;
+            this.Text = text;
 
             BindEvents();
         }
@@ -49,6 +54,7 @@ namespace GuiFramework.Rendering
         public void Render(SKCanvas canvas)
         {
             text.position = rect.GetCenter(offsety: 4);
+            text.text = this.Text;
 
             rect.Position = Position;
             rect.Size = Size;
