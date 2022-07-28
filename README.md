@@ -1,6 +1,6 @@
 # Gui
 
-This is my simple Gui Library.
+This is my simple gui library that uses Skia.
 
 - [x] Text
 - [x] Rectangle
