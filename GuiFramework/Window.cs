@@ -18,7 +18,7 @@ namespace GuiFramework
 
         private void Window_Load(object sender, EventArgs e)
         {
-            Gui.Initialize(this);
+            GuiProgram.Initialize(this);
         }
 
         private void skiaView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
@@ -33,7 +33,7 @@ namespace GuiFramework
                 renderObject.Update();
             }
 
-            Gui.Update(this, e);
+            GuiProgram.Update(this, e);
         }
 
         private void timer1_Tick(object sender, EventArgs e)

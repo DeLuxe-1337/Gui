@@ -101,10 +101,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gui.cs" />
-    <Compile Include="MouseEvent.cs" />
+    <Compile Include="GuiProgram.cs" />
+    <Compile Include="Utility\MouseEvent.cs" />
     <Compile Include="Rendering\gButton.cs" />
-    <Compile Include="Color3.cs" />
+    <Compile Include="Utility\Color3.cs" />
     <Compile Include="Rendering\gRectangle.cs" />
     <Compile Include="Rendering\RenderObject.cs" />
     <Compile Include="Rendering\gText.cs" />

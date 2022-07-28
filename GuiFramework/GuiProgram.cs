@@ -5,7 +5,7 @@ using SkiaSharp.Views.Desktop;
 
 namespace GuiFramework
 {
-    internal class Gui
+    internal class GuiProgram
     {
         public static gButton Test = new gButton(new Vector2(100, 40), new Vector2(100, 45), true);
         public static gButton Other = new gButton(new Vector2(100, 120), new Vector2(100, 45));
