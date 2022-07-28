@@ -1,0 +1,31 @@
+﻿using System;
+using System.Numerics;
+using GuiFramework.Rendering;
+using SkiaSharp.Views.Desktop;
+
+namespace GuiFramework
+{
+    internal class Gui
+    {
+        public static gButton Test = new gButton(new Vector2(100, 40), new Vector2(100, 45), true);
+        public static gButton Other = new gButton(new Vector2(100, 120), new Vector2(100, 45));
+
+        public static void Initialize(Window window)
+        {
+            window.Buffer.Add(Test);
+            Test.Activated += TestOnActivated;
+
+            window.Buffer.Add(Other);
+            Other.Activated += TestOnActivated;
+        }
+
+        private static void TestOnActivated(object sender, EventArgs e)
+        {
+            Console.WriteLine("User has pressed the Gui Button!");
+        }
+
+        public static void Update(Window window, SKPaintSurfaceEventArgs e)
+        {
+        }
+    }
+}
